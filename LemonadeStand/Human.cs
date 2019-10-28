@@ -12,7 +12,10 @@ namespace LemonadeStand
 
 
         //constructor (BUILD)
-
+        public Human()
+        {
+            ChooseName();
+        }
 
         //member methods (CAN DO)
         public override void ChooseName()
