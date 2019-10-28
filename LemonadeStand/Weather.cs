@@ -12,6 +12,7 @@ namespace LemonadeStand
         public string condition;
         public int temperature;
         public List<string> weatherConditions;
+        private Random randomWeatherCondition;
 
         //constructor (BUILD)
         public Weather()
@@ -20,7 +21,20 @@ namespace LemonadeStand
         }
 
         //member methods (CAN DO)
+        public string DayWeatherCondition()
+        {
+            int weatherConditionGenerator = randomWeatherCondition.Next(0, weatherConditions.Count);
+            condition = weatherConditions[weatherConditionGenerator];
+            return condition;
+        }
 
+        public int DayTemperature()
+        {
+            Random random = new Random();
+            int temperature = random.Next(50, 101);
+            return temperature;
+
+        }
 
     }
 }
