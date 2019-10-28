@@ -9,24 +9,38 @@ namespace LemonadeStand
     class Human : Player
     {
         //member variables (HAS A)
-
+        public Store store;
 
         //constructor (BUILD)
         public Human()
         {
             ChooseName();
+            PurchaseItems();
         }
 
         //member methods (CAN DO)
         public override void ChooseName()
         {
             Console.WriteLine("What is your name?");
-            string name = Console.ReadLine();
+            name = Console.ReadLine();
         }
 
         public override void PurchaseItems()
         {
-            //logic to purchase items
+            Console.WriteLine("What do you need to buy?");
+            string ItemsAtStore = Console.ReadLine().ToLower();
+            switch (ItemsAtStore)
+            {
+                case "cups"
+                    Console.WriteLine("How many cups do you need?");
+
+                {
+
+                }
+
+            }
+
+
         }
 
         public override void DetermineRecipe()

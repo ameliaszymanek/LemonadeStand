@@ -27,6 +27,7 @@ namespace LemonadeStand
             //GameType(); can always put this in and create new method for different ways to play the game in the future
             CreatePlayer();
             DisplayInstructions();
+            day.ActualWeatherOnDay();
 
 
         }
