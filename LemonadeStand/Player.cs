@@ -6,21 +6,26 @@ using System.Threading.Tasks;
 
 namespace LemonadeStand
 {
-    class Game
+    public abstract class Player
     {
         //member variables (HAS A)
-        private Player player;
-        private List<int> DaysInOneWeek;
-        private int currentDay;
-
+        public string name;
+        public Inventory inventory;
+        public Wallet wallet;
+        public Recipe recipe;
+        public Pitcher pitcher;
 
         //constructor (BUILD)
-        public Game()
-        {
-            DaysInOneWeek = new List<int>() { 1, 2, 3, 4, 5, 6, 7 };
-        }
+
 
         //member methods (CAN DO)
         public abstract void ChooseName();
+        public abstract void PurchaseItems();
+        public abstract void DetermineRecipe();
+
+
+   
+
+
     }
 }
