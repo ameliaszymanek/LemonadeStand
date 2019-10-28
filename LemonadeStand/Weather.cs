@@ -38,12 +38,7 @@ namespace LemonadeStand
 
         }
 
-        public  DailyWeatherGenerator(int temperature, int weather)
-        {
-            DayTemperature();
-            DayWeatherCondition();
-            return Console.WriteLine("Today's temperature is " + temperature + "degrees Ferenheit with" + weather + "skies");
-        }
+        
 
 
     }

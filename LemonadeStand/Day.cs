@@ -15,7 +15,12 @@ namespace LemonadeStand
         //constructor (BUILD)
 
         //member methods (CAN DO)
-
+        public void DailyWeatherGenerator()
+        {
+            weather.DayTemperature();
+            weather.DayWeatherCondition();
+            Console.WriteLine("Today's temperature is " + weather.temperature + "degrees Ferenheit with" + weather.condition + "skies");
+        }
 
     }
 }

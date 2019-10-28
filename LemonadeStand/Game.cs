@@ -9,9 +9,10 @@ namespace LemonadeStand
     class Game
     {
         //member variables (HAS A)
-        private Player player;
-        private List<int> DaysInOneWeek;
-        private int currentDay;
+        public Day day;
+        public Player player;
+        public List<int> DaysInOneWeek;
+        public int currentDay;
 
 
         //constructor (BUILD)
@@ -49,6 +50,9 @@ namespace LemonadeStand
         }
 
         
+
+
+
 
 
     }
