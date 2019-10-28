@@ -21,7 +21,7 @@ namespace LemonadeStand
         public override void ChooseName()
         {
             Console.WriteLine("What is your name?");
-            name = Console.ReadLine();
+            string name = Console.ReadLine();
         }
 
         public override void PurchaseItems()

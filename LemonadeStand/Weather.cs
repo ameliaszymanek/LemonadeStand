@@ -25,6 +25,7 @@ namespace LemonadeStand
         {
             int weatherConditionGenerator = randomWeatherCondition.Next(0, weatherConditions.Count);
             condition = weatherConditions[weatherConditionGenerator];
+            Console.WriteLine("Today's weather: " + condition);
             return condition;
         }
 
@@ -32,9 +33,18 @@ namespace LemonadeStand
         {
             Random random = new Random();
             int temperature = random.Next(50, 101);
+            Console.WriteLine("Today's temperature: " + condition);
             return temperature;
 
         }
+
+        public  DailyWeatherGenerator(int temperature, int weather)
+        {
+            DayTemperature();
+            DayWeatherCondition();
+            return Console.WriteLine("Today's temperature is " + temperature + "degrees Ferenheit with" + weather + "skies");
+        }
+
 
     }
 }
