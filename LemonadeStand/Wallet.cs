@@ -9,11 +9,14 @@ namespace LemonadeStand
     class Wallet
     {
         //member variables (HAS A)
-        private double money;
+        public double money;
         public double Money;
 
         //constructor (BUILD)
-
+        public Wallet()
+        {
+            money = 20.00;
+        }
 
         //member methods (CAN DO)
 

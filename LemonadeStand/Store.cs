@@ -9,6 +9,8 @@ namespace LemonadeStand
     class Store
     {
         //member variables (HAS A)
+        
+        public Player player;
         private double pricePerCup;
         private double pricePerLemon;
         private double pricePerSugarCube;
@@ -16,7 +18,7 @@ namespace LemonadeStand
         public List<string> ItemsAtStore;
 
         //constructor (BUILD)
-        public Store()
+        public Store(Player player)
         {
             ItemsAtStore = new List<string>() { "cups", "lemons", "sugar", "ice cubes" };
             pricePerCup = .15;
@@ -54,28 +56,33 @@ namespace LemonadeStand
         {
             Console.WriteLine("How many cups do you need?");
             int cups = int.Parse(Console.ReadLine());
-            CostOfCups = pricePerCup * cups;
+            double CostOfCups = pricePerCup * cups;
+            player.wallet.money -= CostOfCups;
+            //add to inventory
         }
 
         public void SellLemons()
         {
             Console.WriteLine("How many lemons do you need?");
             int lemons = int.Parse(Console.ReadLine());
-            CostOfLemons = pricePerLemon * lemons;
+            double CostOfLemons = pricePerLemon * lemons;
+            player.wallet.money -= CostOfLemons;
         }
 
         public void SellSugar()
         {
             Console.WriteLine("How many sugar cubes do you need?");
             int sugarCubes = int.Parse(Console.ReadLine());
-            CostOfSugar = pricePerSugarCube * sugarCubes;
+            double CostOfSugar = pricePerSugarCube * sugarCubes;
+            player.wallet.money -= CostOfSugar;
         }
 
         public void SellIceCubes()
         {
             Console.WriteLine("How many ice cubes do you need?");
             int iceCubes = int.Parse(Console.ReadLine());
-            CostOfIceCubes = pricePerIceCube * iceCubes;
+            double CostOfIceCubes = pricePerIceCube * iceCubes;
+            player.wallet.money -= CostOfIceCubes;
         }
 
 

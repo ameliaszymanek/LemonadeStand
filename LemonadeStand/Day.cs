@@ -37,7 +37,15 @@ namespace LemonadeStand
 
         public void RunDay()
         {
-            //logic for what happens during the entire day
+            //view inventory (day 1 everything is at 0)
+           
+            //ask if player wants to purchase items at store
+            //purchase items at store
+            //display weather again to determine price
+            //determine recipe
+            //customers come
+            //end of day recap display
+            //next day...
         }
     }
 }
