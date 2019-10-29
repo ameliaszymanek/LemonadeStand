@@ -19,9 +19,9 @@ namespace LemonadeStand
         //constructor (BUILD)
         public Player()
         {
-            wallet = new Wallet();
             ChooseName();
-            PurchaseItems();
+            wallet = new Wallet();
+            
 
         }
 
@@ -31,10 +31,10 @@ namespace LemonadeStand
             Console.WriteLine("What is your name?");
             name = Console.ReadLine();
         }
-        public void PurchaseItems()
-        {
-            store.SellItems();
-        }
+        //public void PurchaseItems()
+        //{
+        //    store.SellItems();
+        //}
 
         public void DetermineRecipe()
         {

@@ -12,11 +12,13 @@ namespace LemonadeStand
         public string condition;
         public int temperature;
         public List<string> weatherConditions;
-        private Random randomWeatherCondition;
+        Random randomWeatherCondition;
+        //private Random randomWeatherCondition;
 
         //constructor (BUILD)
-        public Weather()
+        public Weather(Random rng)
         {
+            randomWeatherCondition = rng;
             weatherConditions = new List<string>() { "sunny", "cloudy", "rainy" };
             DayTemperature();
             DayWeatherCondition();
@@ -28,15 +30,15 @@ namespace LemonadeStand
         {
             int weatherConditionGenerator = randomWeatherCondition.Next(0, weatherConditions.Count);
             condition = weatherConditions[weatherConditionGenerator];
-            Console.WriteLine("Today's weather: " + condition);
+          
 
         }
 
         public void DayTemperature()
         {
-            Random random = new Random();
-            temperature = random.Next(50, 101);
-            Console.WriteLine("Today's temperature: " + temperature);
+            
+            temperature = randomWeatherCondition.Next(50, 101);
+         
 
 
         }

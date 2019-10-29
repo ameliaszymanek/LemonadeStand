@@ -13,9 +13,9 @@ namespace LemonadeStand
         //public List<Customer> customers;
 
         //constructor (BUILD)
-        public Day()
+        public Day(Random rng)
         {
-            weather = new Weather();
+            weather = new Weather(rng);
         }
 
         //member methods (CAN DO)
@@ -35,9 +35,9 @@ namespace LemonadeStand
             //
         }
 
-        public void RunDay(Player player)
+        public void RunDay(Player player, Store store)
         {
-            PlayerMenu(player);
+            PlayerMenu(player, store);
            
             //display weather again to determine price
             //determine recipe
@@ -46,7 +46,7 @@ namespace LemonadeStand
             //next day...
         }
 
-        public void PlayerMenu(Player player)
+        public void PlayerMenu(Player player, Store store)
         {
             Console.WriteLine("What would you like to do to prepare for your day?\nTo view your inventory type 'inventory'\nTo see how much money you have type 'wallet'\nTo purchase items for your lemonade stand type 'store'\nTo move on type 'move on'");
             string playerChoice = Console.ReadLine().ToLower();
@@ -54,15 +54,15 @@ namespace LemonadeStand
             {
                 case "inventory":
                     player.inventory.DisplayInventory();
-                    PlayerMenu(player);
+                    PlayerMenu(player, store);
                     break;
                 case "wallet":
                     player.wallet.displayMoneyInWallet();
-                    PlayerMenu(player);
+                    PlayerMenu(player, store);
                     break;
                 case "store":
-                    player.PurchaseItems();
-                    PlayerMenu(player);
+                    store.SellItems();
+                    PlayerMenu(player, store);
                     break;
                 case "move on":
                     break;

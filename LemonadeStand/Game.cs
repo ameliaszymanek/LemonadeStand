@@ -11,6 +11,7 @@ namespace LemonadeStand
         //member variables (HAS A)
         public Weather weather;
         public Player player;
+        public Store store;
         public List<Day> DaysInOneWeek;
         public int currentDay;
 
@@ -26,9 +27,10 @@ namespace LemonadeStand
         {
             Console.WriteLine("For how many days would you like to play?");
             int result = int.Parse(Console.ReadLine());
+            Random rng = new Random();
             for (int i = 0; i < result; i++)
             {
-                Day day = new Day();
+                Day day = new Day(rng);
                 DaysInOneWeek.Add(day);
             }
         }
@@ -40,8 +42,8 @@ namespace LemonadeStand
             CreateDays();
             for (int i = 0; i < DaysInOneWeek.Count; i++)
             {
-                Console.WriteLine("Day: " + (i+1) + DaysInOneWeek[i].weather.temperature + DaysInOneWeek[i].weather.condition);
-                DaysInOneWeek[i].RunDay(player);
+                Console.WriteLine("Today's forecast is: " + DaysInOneWeek[i].weather.temperature + " and " + DaysInOneWeek[i].weather.condition);
+                DaysInOneWeek[i].RunDay(player, store);
             }
            
 
