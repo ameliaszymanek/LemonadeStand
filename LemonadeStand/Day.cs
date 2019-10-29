@@ -13,13 +13,16 @@ namespace LemonadeStand
         //public List<Customer> customers;
 
         //constructor (BUILD)
+        public Day()
+        {
+            weather = new Weather();
+        }
 
         //member methods (CAN DO)
         public void ActualWeatherOnDay()
         {
-            weather.DayTemperature();
-            weather.DayWeatherCondition();
             Console.WriteLine("Today's temperature is " + weather.temperature + "degrees Ferenheit with" + weather.condition + "skies");
+            
         }
 
         public void PredictedForecastForDay()
@@ -32,5 +35,9 @@ namespace LemonadeStand
             //
         }
 
+        public void RunDay()
+        {
+            //logic for what happens during the entire day
+        }
     }
 }

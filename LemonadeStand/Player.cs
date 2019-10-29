@@ -20,7 +20,7 @@ namespace LemonadeStand
 
         //member methods (CAN DO)
         public abstract void ChooseName();
-        public abstract void PurchaseItems();
+        //public abstract void PurchaseItems();
         public abstract void DetermineRecipe();
 
 

@@ -17,24 +17,27 @@ namespace LemonadeStand
         //constructor (BUILD)
         public Weather()
         {
-            weatherConditions = new List<string>() {"sunny", "cloudy", "rainy"};
+            weatherConditions = new List<string>() { "sunny", "cloudy", "rainy" };
+            DayTemperature();
+            DayWeatherCondition();
+          
         }
 
         //member methods (CAN DO)
-        public string DayWeatherCondition()
+        public void DayWeatherCondition()
         {
             int weatherConditionGenerator = randomWeatherCondition.Next(0, weatherConditions.Count);
             condition = weatherConditions[weatherConditionGenerator];
             Console.WriteLine("Today's weather: " + condition);
-            return condition;
+
         }
 
-        public int DayTemperature()
+        public void DayTemperature()
         {
             Random random = new Random();
-            int temperature = random.Next(50, 101);
-            Console.WriteLine("Today's temperature: " + condition);
-            return temperature;
+            temperature = random.Next(50, 101);
+            Console.WriteLine("Today's temperature: " + temperature);
+
 
         }
 

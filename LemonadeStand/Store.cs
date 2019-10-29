@@ -24,10 +24,12 @@ namespace LemonadeStand
             pricePerSugarCube = .10;
             pricePerIceCube = .05;
             
-
         }
+
+      
 
         //member methods (CAN DO)
         //sell items??
+
     }
 }
