@@ -37,6 +37,7 @@ namespace LemonadeStand
 
         public void RunDay()
         {
+            PlayerMenu();
             //view inventory (day 1 everything is at 0)
             //ask if player wants to purchase items at store
             //purchase items at store
@@ -45,6 +46,22 @@ namespace LemonadeStand
             //customers come
             //end of day recap display
             //next day...
+        }
+
+        public void PlayerMenu()
+        {
+            Console.WriteLine("What would you like to do to prepare for your day?\nTo view your inventory type 'inventory'\nTo see how much money you have type 'wallet'\nTo purchase items for your lemonade stand type 'store'");
+            string playerChoice = Console.ReadLine().ToLower();
+            switch (playerChoice)
+            {
+                case "inventory";
+                    //display inventory;
+                case "wallet";
+                    //display amount of money in wallet;
+                case "store";
+                    //purchase items;
+            }
+
         }
     }
 }
