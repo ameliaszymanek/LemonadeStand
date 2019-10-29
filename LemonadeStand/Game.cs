@@ -24,7 +24,7 @@ namespace LemonadeStand
         //member methods (CAN DO)
         public void CreateDays()
         {
-            Console.WriteLine("How many days");
+            Console.WriteLine("For how many days would you like to play?");
             int result = int.Parse(Console.ReadLine());
             for (int i = 0; i < result; i++)
             {
@@ -37,6 +37,7 @@ namespace LemonadeStand
             //GameType(); can always put this in and create new method for different ways to play the game in the future
             CreatePlayer();
             DisplayInstructions();
+            CreateDays();
             for (int i = 0; i < DaysInOneWeek.Count; i++)
             {
                 Console.WriteLine("Day: " + (i+1) + DaysInOneWeek[i].weather.temperature + DaysInOneWeek[i].weather.condition);

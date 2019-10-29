@@ -25,23 +25,7 @@ namespace LemonadeStand
             name = Console.ReadLine();
         }
 
-        //public override void PurchaseItems()
-        //{
-        //    Console.WriteLine("What do you need to buy?");
-        //    string ItemsAtStore = Console.ReadLine().ToLower();
-        //    switch (ItemsAtStore)
-        //    {
-        //        case "cups":
-        //            Console.WriteLine("How many cups do you need?");
-        //            Console.ReadLine()
-             
-
-        //    }
-
-
-        //}
-
-
+        
 
         public override void DetermineRecipe()
         {
