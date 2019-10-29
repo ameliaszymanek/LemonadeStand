@@ -14,13 +14,14 @@ namespace LemonadeStand
         public Inventory inventory;
         public Recipe recipe;
         public Pitcher pitcher;
-        public Store store;
+        
 
         //constructor (BUILD)
         public Player()
         {
             ChooseName();
             wallet = new Wallet();
+            inventory = new Inventory();
             
 
         }

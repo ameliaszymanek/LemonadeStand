@@ -20,6 +20,8 @@ namespace LemonadeStand
         public Game()
         {
             DaysInOneWeek = new List<Day>();
+            player = new Player();
+            store = new Store(player);
         }
 
         //member methods (CAN DO)

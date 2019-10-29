@@ -25,6 +25,7 @@ namespace LemonadeStand
             pricePerLemon = .25;
             pricePerSugarCube = .10;
             pricePerIceCube = .05;
+            this.player = player;
             
         }
 
