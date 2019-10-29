@@ -9,15 +9,17 @@ namespace LemonadeStand
     class Inventory
     {
         //member variables (HAS A)
-        public int lemons;
-        public List<IceCube> iceCubes;
-        public List<Cup> cups;
-        public List<SugarCube> sugarCubes;
-
+        public int lemonsInInv;
+        public int sugarCubesInInv;
+        public int cupsInInv;
+        public int iceCubesInInv;
         //constructor (BUILD)
         public Inventory()
         {
-
+            lemonsInInv = 0;
+            sugarCubesInInv = 0;
+            cupsInInv = 0;
+            iceCubesInInv = 0;
         }
 
         //member methods (CAN DO)

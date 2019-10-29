@@ -58,7 +58,6 @@ namespace LemonadeStand
             int cups = int.Parse(Console.ReadLine());
             double CostOfCups = pricePerCup * cups;
             player.wallet.money -= CostOfCups;
-            //add to inventory
         }
 
         public void SellLemons()

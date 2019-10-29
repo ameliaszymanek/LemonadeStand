@@ -66,10 +66,7 @@ namespace LemonadeStand
             Console.WriteLine("Instructions:\nYour goal is to make as much money as you can in seven days by selling lemonade at your lemonade stand.\nYou will have an initial budget of $20.00 enabling you to purchase cups, lemons, sugar, and ice cubes.\nYou will be able to set your own recipe and price for a cup of lemonade.\nAfter you determine your plan you will be able to buy the inventory needed at the store.\nBe sure to keep the weather and conditions in mind when determining your recipe and the price per cup.\nYou will see how well your stand did at the end of each day.");
         }
 
-        public void CycleDays()
-        {
-
-        }
+        
 
 
 

@@ -10,8 +10,8 @@ namespace LemonadeStand
     {
         //member variables (HAS A)
         public string name;
-        //public Inventory inventory;
         public Wallet wallet;
+        //public Inventory inventory;
         //public Recipe recipe;
         //public Pitcher pitcher;
 
@@ -19,11 +19,19 @@ namespace LemonadeStand
         public Player()
         {
             wallet = new Wallet();
+
         }
 
         //member methods (CAN DO)
         public abstract void ChooseName();
-        //public abstract void PurchaseItems();
+        public abstract void PurchaseItems();
+
+        public void ViewInv()
+        {
+            //logic to display inv
+        }
+
+        //AddItemsToInv();???
         public abstract void DetermineRecipe();
 
 

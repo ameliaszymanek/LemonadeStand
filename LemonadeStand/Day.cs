@@ -38,7 +38,6 @@ namespace LemonadeStand
         public void RunDay()
         {
             //view inventory (day 1 everything is at 0)
-           
             //ask if player wants to purchase items at store
             //purchase items at store
             //display weather again to determine price

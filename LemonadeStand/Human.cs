@@ -15,7 +15,7 @@ namespace LemonadeStand
         public Human()
         {
             ChooseName();
-            //PurchaseItems();
+            PurchaseItems();
         }
 
         //member methods (CAN DO)
@@ -25,11 +25,15 @@ namespace LemonadeStand
             name = Console.ReadLine();
         }
 
-        
-
-        public override void DetermineRecipe()
+        public override void PurchaseItems()
         {
-            //logic to determind recipe
+
+        }
+
+
+    public override void DetermineRecipe()
+        {
+            //logic to determine recipe
         }
 
     }
