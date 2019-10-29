@@ -35,12 +35,10 @@ namespace LemonadeStand
             //
         }
 
-        public void RunDay()
+        public void RunDay(Player player)
         {
-            PlayerMenu();
-            //view inventory (day 1 everything is at 0)
-            //ask if player wants to purchase items at store
-            //purchase items at store
+            PlayerMenu(player);
+           
             //display weather again to determine price
             //determine recipe
             //customers come
@@ -48,18 +46,26 @@ namespace LemonadeStand
             //next day...
         }
 
-        public void PlayerMenu()
+        public void PlayerMenu(Player player)
         {
-            Console.WriteLine("What would you like to do to prepare for your day?\nTo view your inventory type 'inventory'\nTo see how much money you have type 'wallet'\nTo purchase items for your lemonade stand type 'store'");
+            Console.WriteLine("What would you like to do to prepare for your day?\nTo view your inventory type 'inventory'\nTo see how much money you have type 'wallet'\nTo purchase items for your lemonade stand type 'store'\nTo move on type 'move on'");
             string playerChoice = Console.ReadLine().ToLower();
             switch (playerChoice)
             {
-                case "inventory";
-                    //display inventory;
-                case "wallet";
-                    //display amount of money in wallet;
-                case "store";
-                    //purchase items;
+                case "inventory":
+                    player.inventory.DisplayInventory();
+                    PlayerMenu(player);
+                    break;
+                case "wallet":
+                    player.wallet.displayMoneyInWallet();
+                    PlayerMenu(player);
+                    break;
+                case "store":
+                    player.PurchaseItems();
+                    PlayerMenu(player);
+                    break;
+                case "move on":
+                    break;
             }
 
         }

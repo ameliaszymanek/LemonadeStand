@@ -6,34 +6,42 @@ using System.Threading.Tasks;
 
 namespace LemonadeStand
 {
-    public abstract class Player
+    class Player
     {
         //member variables (HAS A)
         public string name;
         public Wallet wallet;
-        //public Inventory inventory;
-        //public Recipe recipe;
-        //public Pitcher pitcher;
+        public Inventory inventory;
+        public Recipe recipe;
+        public Pitcher pitcher;
+        public Store store;
 
         //constructor (BUILD)
         public Player()
         {
             wallet = new Wallet();
+            ChooseName();
+            PurchaseItems();
 
         }
 
         //member methods (CAN DO)
-        public abstract void ChooseName();
-        public abstract void PurchaseItems();
-
-        public void ViewInv()
+        public void ChooseName()
         {
-            //logic to display inv
+            Console.WriteLine("What is your name?");
+            name = Console.ReadLine();
+        }
+        public void PurchaseItems()
+        {
+            store.SellItems();
         }
 
-        //AddItemsToInv();???
-        public abstract void DetermineRecipe();
+        public void DetermineRecipe()
+        {
+            //logic to determine recipe
+        }
 
+        
 
    
 

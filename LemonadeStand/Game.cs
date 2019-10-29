@@ -41,7 +41,7 @@ namespace LemonadeStand
             for (int i = 0; i < DaysInOneWeek.Count; i++)
             {
                 Console.WriteLine("Day: " + (i+1) + DaysInOneWeek[i].weather.temperature + DaysInOneWeek[i].weather.condition);
-                DaysInOneWeek[i].RunDay();
+                DaysInOneWeek[i].RunDay(player);
             }
            
 
@@ -58,7 +58,7 @@ namespace LemonadeStand
         //}
         public void CreatePlayer()
         {
-            player = new Human();
+            player = new Player();
         }
 
         public void DisplayInstructions()

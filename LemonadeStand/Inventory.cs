@@ -23,7 +23,13 @@ namespace LemonadeStand
         }
 
         //member methods (CAN DO)
-        
+        public void DisplayInventory()
+        {
+            Console.WriteLine("You have" + lemonsInInv + "lemons");
+            Console.WriteLine("You have" + sugarCubesInInv + "sugar cubes");
+            Console.WriteLine("You have" + cupsInInv + "cups");
+            Console.WriteLine("You have" + iceCubesInInv + "ice cubes");
+        }
 
     }
 }

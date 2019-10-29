@@ -19,6 +19,10 @@ namespace LemonadeStand
         }
 
         //member methods (CAN DO)
+        public void displayMoneyInWallet()
+        {
+            Console.WriteLine("You have $" + money);
+        }
 
 
     }
