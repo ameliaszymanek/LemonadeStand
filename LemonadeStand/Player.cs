@@ -22,6 +22,7 @@ namespace LemonadeStand
             ChooseName();
             wallet = new Wallet();
             inventory = new Inventory();
+            recipe = new Recipe();
             
 
         }
@@ -32,19 +33,13 @@ namespace LemonadeStand
             Console.WriteLine("What is your name?");
             name = Console.ReadLine();
         }
-        //public void PurchaseItems()
-        //{
-        //    store.SellItems();
-        //}
-
-        public void DetermineRecipe()
-        {
-            //logic to determine recipe
-        }
+        
 
         
 
-   
+
+
+
 
 
     }

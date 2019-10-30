@@ -38,9 +38,8 @@ namespace LemonadeStand
         }
         public void RunGame()
         {
-            //GameType(); can always put this in and create new method for different ways to play the game in the future
-            //CreatePlayer();
             DisplayInstructions();
+            player.recipe.CreateRecipe();
             CreateDays();
             for (int i = 0; i < DaysInOneWeek.Count; i++)
             {
@@ -53,13 +52,6 @@ namespace LemonadeStand
         }
 
 
-
-        /////////////////////
-
-        //public void GameType()
-        //{
-
-        //}
         public void CreatePlayer()
         {
             player = new Player();
