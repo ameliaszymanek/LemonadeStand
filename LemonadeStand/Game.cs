@@ -39,7 +39,7 @@ namespace LemonadeStand
         public void RunGame()
         {
             //GameType(); can always put this in and create new method for different ways to play the game in the future
-            CreatePlayer();
+            //CreatePlayer();
             DisplayInstructions();
             CreateDays();
             for (int i = 0; i < DaysInOneWeek.Count; i++)

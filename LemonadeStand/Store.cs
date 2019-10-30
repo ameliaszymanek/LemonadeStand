@@ -59,6 +59,7 @@ namespace LemonadeStand
             int cups = int.Parse(Console.ReadLine());
             double CostOfCups = pricePerCup * cups;
             player.wallet.money -= CostOfCups;
+            player.inventory.cupsInInv += cups;
         }
 
         public void SellLemons()
@@ -67,6 +68,7 @@ namespace LemonadeStand
             int lemons = int.Parse(Console.ReadLine());
             double CostOfLemons = pricePerLemon * lemons;
             player.wallet.money -= CostOfLemons;
+            player.inventory.lemonsInInv += lemons;
         }
 
         public void SellSugar()
@@ -75,6 +77,7 @@ namespace LemonadeStand
             int sugarCubes = int.Parse(Console.ReadLine());
             double CostOfSugar = pricePerSugarCube * sugarCubes;
             player.wallet.money -= CostOfSugar;
+            player.inventory.sugarCubesInInv += sugarCubes;
         }
 
         public void SellIceCubes()
@@ -83,6 +86,7 @@ namespace LemonadeStand
             int iceCubes = int.Parse(Console.ReadLine());
             double CostOfIceCubes = pricePerIceCube * iceCubes;
             player.wallet.money -= CostOfIceCubes;
+            player.inventory.cupsInInv += iceCubes;
         }
 
 
