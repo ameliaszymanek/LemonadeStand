@@ -10,12 +10,13 @@ namespace LemonadeStand
     {
         //member variables (HAS A)
         public Weather weather;
-        //public List<Customer> customers;
+        public List<Customer> customers;
 
         //constructor (BUILD)
         public Day(Random rng)
         {
             weather = new Weather(rng);
+            customers = new List<Customer>();
         }
 
         //member methods (CAN DO)
@@ -38,7 +39,6 @@ namespace LemonadeStand
         public void RunDay(Player player, Store store)
         {
             PlayerMenu(player, store);
-           
             //display weather again to determine price
             //determine recipe
             //customers come
@@ -68,6 +68,11 @@ namespace LemonadeStand
                     break;
             }
 
+        }
+
+        public void NumOfCustomersForDay()
+        {
+            customers = ???.Next(50, 151);
         }
     }
 }

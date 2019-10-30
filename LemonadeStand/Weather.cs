@@ -30,17 +30,11 @@ namespace LemonadeStand
         {
             int weatherConditionGenerator = randomWeatherCondition.Next(0, weatherConditions.Count);
             condition = weatherConditions[weatherConditionGenerator];
-          
-
         }
 
         public void DayTemperature()
-        {
-            
+        {   
             temperature = randomWeatherCondition.Next(50, 101);
-         
-
-
         }
 
         

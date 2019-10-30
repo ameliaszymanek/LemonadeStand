@@ -27,7 +27,7 @@ namespace LemonadeStand
         //member methods (CAN DO)
         public void CreateDays()
         {
-            Console.WriteLine("For how many days would you like to play?");
+            Console.WriteLine(player.name + " ,for how many days would you like to play?");
             int result = int.Parse(Console.ReadLine());
             Random rng = new Random();
             for (int i = 0; i < result; i++)
@@ -46,7 +46,8 @@ namespace LemonadeStand
                 Console.WriteLine("Today's forecast is: " + DaysInOneWeek[i].weather.temperature + " and " + DaysInOneWeek[i].weather.condition);
                 DaysInOneWeek[i].RunDay(player, store);
             }
-           
+            
+
 
 
         }
