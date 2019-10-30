@@ -76,7 +76,7 @@ namespace LemonadeStand
             int randomGeneratedNumber = random.Next(50, 151);
             for (int i = 0; i < randomGeneratedNumber; i++)
             {
-                customers.Add(new Customer());
+                customers.Add(new Customer(random));
             }
         }
     }

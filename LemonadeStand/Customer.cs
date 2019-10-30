@@ -9,12 +9,49 @@ namespace LemonadeStand
     class Customer
     {
         //member variables (HAS A)
-        private List<string> names;
-        public string name;
+        public Random random;
 
         //constructor (BUILD)
+        public Customer(Random random)
+        {
+            this.random = random;
+        }
 
 
         //member methods (CAN DO)
-    }
+
+        private int GenerateRandomNumber(int min, int max)
+        {
+            int randomGeneratedNumber = random.Next(min, max);
+                return randomGeneratedNumber;   
+        }
+
+
+        private void DecisionBasedOnWeather(//???)
+        {
+            if (weather.temperature > 70 & weather.condition == "sunny")
+            {
+                GenerateRandomNumber(40, 100);
+            }
+            else if (weather.temperature < 70 & weather.condition == "sunny")
+            {
+                GenerateRandomNumber(45, 100);
+            }
+        }
+
+        private void DecisionBasedOnPrice()
+        {
+            //
+            return result;
+        }
+
+        public void MakeDecision()
+        {
+            //if result of DBoW is greater than 50
+            //if result of DBoP is greater than 50
+        }
+
+
+
+    }      
 }
