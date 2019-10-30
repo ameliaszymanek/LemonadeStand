@@ -17,6 +17,7 @@ namespace LemonadeStand
         {
             weather = new Weather(rng);
             customers = new List<Customer>();
+            NumOfCustomersForDay(rng);
         }
 
         //member methods (CAN DO)
@@ -70,9 +71,13 @@ namespace LemonadeStand
 
         }
 
-        public void NumOfCustomersForDay()
+        private void NumOfCustomersForDay(Random random)
         {
-            customers = ???.Next(50, 151);
+            int randomGeneratedNumber = random.Next(50, 151);
+            for (int i = 0; i < randomGeneratedNumber; i++)
+            {
+                customers.Add(new Customer());
+            }
         }
     }
 }
