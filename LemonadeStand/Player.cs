@@ -34,8 +34,15 @@ namespace LemonadeStand
             Console.WriteLine("What is your name?");
             name = Console.ReadLine();
         }
-        
-       
+
+        public void MakePitcher()
+        {
+            inventory.lemonsInInv -= recipe.amountOfLemons;
+            inventory.sugarCubesInInv -= recipe.amountOfSugarCubes;
+            inventory.iceCubesInInv -= recipe.amountOfIceCubes;
+        }
+
+
 
 
 

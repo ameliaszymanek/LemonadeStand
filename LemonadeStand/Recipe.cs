@@ -43,5 +43,7 @@ namespace LemonadeStand
             Console.WriteLine("What would you like the price per cup of lemonade to be?");
             pricePerCup = Double.Parse(Console.ReadLine());
         }
+
+       
     }
 }

@@ -19,9 +19,10 @@ namespace LemonadeStand
         }
 
         //member methods (CAN DO)
-        public void PourCup()
+        public void PourCup(Player player)
         {
             cupsLeftInPitcher--;
+            player.inventory.cupsInInv--;
         }
 
 
