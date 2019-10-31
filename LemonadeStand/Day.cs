@@ -40,8 +40,8 @@ namespace LemonadeStand
         public void RunDay(Player player, Store store)
         {
             PlayerMenu(player, store);
-            //display weather again to determine price
-            //determine recipe
+            //determine price
+            
             //customers come
             //end of day recap display
             //next day...
@@ -49,7 +49,7 @@ namespace LemonadeStand
 
         public void PlayerMenu(Player player, Store store)
         {
-            Console.WriteLine("What would you like to do to prepare for your day?\nTo view your inventory type 'inventory'\nTo see how much money you have type 'wallet'\nTo purchase items for your lemonade stand type 'store'\nTo move on type 'move on'");
+            Console.WriteLine("What would you like to do to prepare for your day?\nTo view your inventory type 'inventory'\nTo see how much money you have type 'wallet'\nTo purchase items for your lemonade stand type 'store'\nTo set the price for a cup of lemonade type 'set price'\nTo move on type 'move on'");
             string playerChoice = Console.ReadLine().ToLower();
             switch (playerChoice)
             {
@@ -64,6 +64,9 @@ namespace LemonadeStand
                 case "store":
                     store.SellItems();
                     PlayerMenu(player, store);
+                    break;
+                case "set price":
+                    player.recipe.SetPrice();
                     break;
                 case "move on":
                     break;
