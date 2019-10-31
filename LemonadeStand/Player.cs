@@ -23,6 +23,7 @@ namespace LemonadeStand
             wallet = new Wallet();
             inventory = new Inventory();
             recipe = new Recipe();
+            pitcher = new Pitcher();
             
 
         }
@@ -34,8 +35,7 @@ namespace LemonadeStand
             name = Console.ReadLine();
         }
         
-
-        
+       
 
 
 

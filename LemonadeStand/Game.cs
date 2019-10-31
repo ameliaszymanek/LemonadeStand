@@ -29,10 +29,10 @@ namespace LemonadeStand
         {
             Console.WriteLine(player.name + " ,for how many days would you like to play?");
             int result = int.Parse(Console.ReadLine());
-            Random rng = new Random();
+            Random random = new Random();
             for (int i = 0; i < result; i++)
             {
-                Day day = new Day(rng);
+                Day day = new Day(random);
                 DaysInOneWeek.Add(day);
             }
         }

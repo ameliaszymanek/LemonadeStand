@@ -23,7 +23,7 @@ namespace LemonadeStand
         private int GenerateRandomNumber(int min, int max)
         {
             int randomGeneratedNumber = random.Next(min, max);
-                return randomGeneratedNumber;   
+            return randomGeneratedNumber;
         }
 
 
@@ -83,21 +83,28 @@ namespace LemonadeStand
 
         }
 
-        public int MakeDecision(Weather weather, Player player)
+        public bool MakeDecision(Weather weather, Player player)
         {
             if (DecisionBasedOnWeather(weather) > 50 && DecisionBasedOnPrice(player) > 50)
             {
-                //minus cup from pitcher
-                //add pricePerCup to wallet
+                player.pitcher.PourCup();
+                PayForCupOfLem(player);
+                Console.WriteLine("Cup sold!");
+                return true;
             }
             else
             {
+                return false;
                 
             }
-            
-            //if result of DBoW is greater than 50
-            //if result of DBoP is greater than 50
         }
+
+        public void PayForCupOfLem(Player player)
+        {
+            player.wallet.money += player.recipe.pricePerCup;
+        }
+
+        
 
 
 

@@ -10,7 +10,7 @@ namespace LemonadeStand
     {
         //member variables (HAS A)
         public double money;
-        public double Money;
+        //public double Money;
 
         //constructor (BUILD)
         public Wallet()

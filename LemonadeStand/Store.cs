@@ -34,21 +34,27 @@ namespace LemonadeStand
         //member methods (CAN DO)
         public void SellItems()
         {
-            Console.WriteLine("What would you like to buy? type 'cups', 'lemons', 'sugar', or 'ice cubes'.");
+            Console.WriteLine("What would you like to buy? type 'cups', 'lemons', 'sugar', or 'ice cubes'. If you are done shopping type 'done'.");
             string ItemsAtStore = Console.ReadLine().ToLower();
             switch(ItemsAtStore)
             {
                 case "cups":
                     SellCups();
+                    SellItems();
                     break;
                 case "lemons":
                     SellLemons();
+                    SellItems();
                     break;
                 case "sugar":
                     SellSugar();
+                    SellItems();
                     break;
                 case "ice cubes":
                     SellIceCubes();
+                    SellItems();
+                    break;
+                case "done":
                     break;
             }
         }
@@ -86,7 +92,7 @@ namespace LemonadeStand
             int iceCubes = int.Parse(Console.ReadLine());
             double CostOfIceCubes = pricePerIceCube * iceCubes;
             player.wallet.money -= CostOfIceCubes;
-            player.inventory.cupsInInv += iceCubes;
+            player.inventory.iceCubesInInv += iceCubes;
         }
 
 
