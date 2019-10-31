@@ -101,7 +101,7 @@ namespace LemonadeStand
 
         public void PayForCupOfLem(Player player)
         {
-            player.wallet.money += player.recipe.pricePerCup;
+            player.wallet.Money += player.recipe.pricePerCup;
         }
 
         

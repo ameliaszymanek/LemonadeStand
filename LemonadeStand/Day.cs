@@ -46,10 +46,10 @@ namespace LemonadeStand
                 customer.MakeDecision(weather, player);
             }
 
+            //end of day recap display- daily profit/loss, total profit/loss
+            DisplayEndOfDayRecap(player);
+            //MoveDayEarnings move Money to money in wallet
 
-
-            //customers come
-            //end of day recap display
             //next day...
         }
 
@@ -88,6 +88,13 @@ namespace LemonadeStand
             {
                 customers.Add(new Customer(random));
             }
+        }
+
+        private void DisplayEndOfDayRecap(Player player)
+        {
+            Console.WriteLine("You started with $" + player.wallet.money + " today");
+            Console.WriteLine("Today's profit= " + player.wallet.Money);
+            Console.WriteLine("Total profit= " + (player.wallet.Money + player.wallet.money));
         }
     }
 }

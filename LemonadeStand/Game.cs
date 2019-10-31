@@ -27,7 +27,7 @@ namespace LemonadeStand
         //member methods (CAN DO)
         public void CreateDays()
         {
-            Console.WriteLine(player.name + " ,for how many days would you like to play?");
+            Console.WriteLine(player.name + ", for how many days would you like to play?");
             int result = int.Parse(Console.ReadLine());
             Random random = new Random();
             for (int i = 0; i < result; i++)
