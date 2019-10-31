@@ -49,7 +49,7 @@ namespace LemonadeStand
             //end of day recap display- daily profit/loss, total profit/loss
             DisplayEndOfDayRecap(player);
             //MoveDayEarnings move Money to money in wallet
-
+            MoveDayEarnings(player);
             //next day...
         }
 
@@ -95,6 +95,12 @@ namespace LemonadeStand
             Console.WriteLine("You started with $" + player.wallet.money + " today");
             Console.WriteLine("Today's profit= " + player.wallet.Money);
             Console.WriteLine("Total profit= " + (player.wallet.Money + player.wallet.money));
+        }
+
+        private void MoveDayEarnings(Player player)
+        {
+            player.wallet.money += player.wallet.Money;
+            player.wallet.Money -= player.wallet.Money;
         }
     }
 }
