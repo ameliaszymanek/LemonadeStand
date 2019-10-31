@@ -31,28 +31,29 @@ namespace LemonadeStand
         {
             if (weather.temperature > 70 && weather.condition == "sunny")
             {
-                GenerateRandomNumber(40, 100);
+                return GenerateRandomNumber(40, 100);
             }
             else if (weather.temperature < 70 && weather.condition == "sunny")
             {
-                GenerateRandomNumber(45, 100);
+                return GenerateRandomNumber(45, 100);
             }
             else if (weather.temperature > 70 && weather.condition == "cloudy")
             {
-                GenerateRandomNumber(30, 100);
+                return GenerateRandomNumber(30, 100);
             }
             else if (weather.temperature < 70 && weather.condition == "cloudy")
             {
-                GenerateRandomNumber(40, 100);
+                return GenerateRandomNumber(40, 100);
             }
             else if (weather.temperature >= 90 && weather.condition == "rainy")
             {
-                GenerateRandomNumber(20, 100);
+                return GenerateRandomNumber(20, 100);
             }
-            else if (weather.temperature < 90 && weather.condition == "rainy")
+            else 
             {
-                GenerateRandomNumber(0, 0);
+                return GenerateRandomNumber(0, 0);
             }
+
 
             
         }
@@ -61,34 +62,37 @@ namespace LemonadeStand
         {
             if (player.recipe.pricePerCup < .25)
             {
-                GenerateRandomNumber(47, 100);
+                return GenerateRandomNumber(47, 100);
             }
             else if (player.recipe.pricePerCup < .50)
             {
-                GenerateRandomNumber(30, 100);
+                return GenerateRandomNumber(30, 100);
             }
             else if (player.recipe.pricePerCup < .75)
             {
-                GenerateRandomNumber(20, 100);
+                return GenerateRandomNumber(20, 100);
             }
             else if (player.recipe.pricePerCup < 1.00)
             {
-                GenerateRandomNumber(10, 100);
+                return GenerateRandomNumber(10, 100);
             }
-            else if (player.recipe.pricePerCup >= 1.01)
+            else
             {
-                GenerateRandomNumber(0, 0);
+                return GenerateRandomNumber(0, 0);
             }
 
         }
 
-        public bool MakeDecision(Weather weather, Player player)
+        public int MakeDecision(Weather weather, Player player)
         {
             if (DecisionBasedOnWeather(weather) > 50 && DecisionBasedOnPrice(player) > 50)
             {
-                result = true;
-
-
+                //minus cup from pitcher
+                //add pricePerCup to wallet
+            }
+            else
+            {
+                
             }
             
             //if result of DBoW is greater than 50
