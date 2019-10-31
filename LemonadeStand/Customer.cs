@@ -27,7 +27,7 @@ namespace LemonadeStand
         }
 
 
-        private void DecisionBasedOnWeather(//???)
+        private void DecisionBasedOnWeather(Weather weather)
         {
             if (weather.temperature > 70 & weather.condition == "sunny")
             {
@@ -37,12 +37,27 @@ namespace LemonadeStand
             {
                 GenerateRandomNumber(45, 100);
             }
+            else if (weather.temperature > 70 & weather.condition == "cloudy")
+            {
+                GenerateRandomNumber(30, 100);
+            }
+            else if (weather.temperature < 70 & weather.condition == "cloudy")
+            {
+                GenerateRandomNumber(40, 100);
+            }
+            else if (weather.temperature >= 90 & weather.condition == "rainy")
+            {
+                GenerateRandomNumber(20, 100);
+            }
+            else if (weather.temperature < 90 & weather.condition == "rainy")
+            {
+                GenerateRandomNumber(0, 0);
+            }
         }
 
         private void DecisionBasedOnPrice()
         {
-            //
-            return result;
+            if ()
         }
 
         public void MakeDecision()
