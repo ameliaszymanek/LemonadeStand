@@ -37,10 +37,18 @@ namespace LemonadeStand
 
         public void MakePitcher()
         {
-            inventory.lemonsInInv -= recipe.amountOfLemons;
-            inventory.sugarCubesInInv -= recipe.amountOfSugarCubes;
-            inventory.iceCubesInInv -= recipe.amountOfIceCubes;
+            if (inventory.lemonsInInv >= recipe.amountOfLemons  && inventory.sugarCubesInInv >= recipe.amountOfSugarCubes && inventory.iceCubesInInv >= recipe.amountOfIceCubes)
+            {
+                inventory.lemonsInInv -= recipe.amountOfLemons;
+                inventory.sugarCubesInInv -= recipe.amountOfSugarCubes;
+                inventory.iceCubesInInv -= recipe.amountOfIceCubes;
+            }
+            pitcher.cupsLeftInPitcher = 15;
+
+
         }
+
+        
 
 
 

@@ -21,8 +21,16 @@ namespace LemonadeStand
         //member methods (CAN DO)
         public void PourCup(Player player)
         {
-            cupsLeftInPitcher--;
-            player.inventory.cupsInInv--;
+            if (cupsLeftInPitcher > 0)
+            {
+                cupsLeftInPitcher--;
+                player.inventory.cupsInInv--;
+            }
+            else if (cupsLeftInPitcher == 0)
+            {
+                player.MakePitcher();
+            }
+            
         }
 
 

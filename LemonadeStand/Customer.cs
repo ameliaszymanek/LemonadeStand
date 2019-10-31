@@ -52,10 +52,7 @@ namespace LemonadeStand
             else 
             {
                 return GenerateRandomNumber(0, 0);
-            }
-
-
-            
+            }  
         }
 
         private int DecisionBasedOnPrice(Player player)
@@ -80,14 +77,13 @@ namespace LemonadeStand
             {
                 return GenerateRandomNumber(0, 0);
             }
-
         }
 
         public bool MakeDecision(Weather weather, Player player)
         {
             if (DecisionBasedOnWeather(weather) > 50 && DecisionBasedOnPrice(player) > 50)
             {
-                player.pitcher.PourCup();
+                player.pitcher.PourCup(player);
                 PayForCupOfLem(player);
                 Console.WriteLine("Cup sold!");
                 return true;

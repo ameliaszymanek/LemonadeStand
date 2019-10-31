@@ -45,17 +45,14 @@ namespace LemonadeStand
             {
                 customer.MakeDecision(weather, player);
             }
-
-            //end of day recap display- daily profit/loss, total profit/loss
             DisplayEndOfDayRecap(player);
-            //MoveDayEarnings move Money to money in wallet
             MoveDayEarnings(player);
             //next day...
         }
 
         public void PlayerMenu(Player player, Store store)
         {
-            Console.WriteLine("What would you like to do to prepare for your day?\nTo view your inventory type 'inventory'\nTo see how much money you have type 'wallet'\nTo purchase items for your lemonade stand type 'store'\nSet your price when you are ready to start selling\nTo set the price for a cup of lemonade type 'set price'\nWhen you are ready to open your lemonade stand type 'open'");
+            Console.WriteLine("What would you like to do to prepare for your day?\nTo view your inventory type 'inventory'\nTo see how much money you have type 'wallet'\nTo purchase items for your lemonade stand type 'store'\nSet your price before you start selling\nTo set the price for a cup of lemonade type 'set price'\nMake a pitcher before you open\nType 'make pitcher' to make a pitcher\nWhen you are ready to open your lemonade stand type 'open'");
             string playerChoice = Console.ReadLine().ToLower();
             switch (playerChoice)
             {
@@ -73,6 +70,10 @@ namespace LemonadeStand
                     break;
                 case "set price":
                     player.recipe.SetPrice();
+                    PlayerMenu(player, store);
+                    break;
+                case "make pitcher":
+                    player.MakePitcher();
                     PlayerMenu(player, store);
                     break;
                 case "open":
