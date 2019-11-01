@@ -42,6 +42,7 @@ namespace LemonadeStand
             }
             DisplayEndOfDayRecap(player);
             MoveDayEarnings(player);
+            ResetInvestedMoney(player);
         }
         ////////SOLID///////The PlayerMenu method was created keeping the Open/Closed Principle in mind. I can easily make a case for "week forecast" down the road to add new functionality within the existing method.
         public void PlayerMenu(Player player, Store store)
@@ -96,6 +97,11 @@ namespace LemonadeStand
         {
             player.wallet.money += player.wallet.Money;
             player.wallet.Money -= player.wallet.Money;
+        }
+
+        private void ResetInvestedMoney(Player player)
+        {
+            player.wallet.investedMoney = 0;
         }
     }
 }
