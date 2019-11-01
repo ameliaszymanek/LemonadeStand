@@ -87,9 +87,9 @@ namespace LemonadeStand
         private void DisplayEndOfDayRecap(Player player)
         {
             Console.WriteLine("You started with $" + player.wallet.money + " today");
-            Console.WriteLine("Today's profit= " + player.wallet.Money);
-            Console.WriteLine("Total running profit= " + (player.wallet.investedMoney + player.wallet.Money));
-            Console.WriteLine("Total money in pocket= " + (player.wallet.Money + player.wallet.money));
+            Console.WriteLine("Today's earnings = $" + player.wallet.Money);
+            Console.WriteLine("Total running profit/loss = $" + (player.wallet.Money - player.wallet.investedMoney));
+            Console.WriteLine("Total money in pocket = $" + (player.wallet.Money + player.wallet.money));
         }
 
         private void MoveDayEarnings(Player player)
