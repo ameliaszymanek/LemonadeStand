@@ -39,6 +39,7 @@ namespace LemonadeStand
         public void RunGame()
         {
             DisplayInstructions();
+            Console.WriteLine("Time to create your lemonade recipe!");
             player.recipe.CreateRecipe();
             CreateDays();
             for (int i = 0; i < DaysInOneWeek.Count; i++)

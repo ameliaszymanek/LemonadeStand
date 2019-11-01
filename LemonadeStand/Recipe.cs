@@ -25,7 +25,6 @@ namespace LemonadeStand
         //member methods (CAN DO)
         public string GetStringInput(string amount)
         {
-            Console.WriteLine("Time to create your lemonade recipe!");
             Console.WriteLine($"Enter {amount}");
             string input = Console.ReadLine().ToLower();
             return input;
