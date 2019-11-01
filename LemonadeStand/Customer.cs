@@ -19,7 +19,7 @@ namespace LemonadeStand
 
         //member methods (CAN DO)
 
-        ////////////I created this GenerateRandomNumber memthod keeping the Single Responsibility Principle in mind. Instead of nesting a new generate random number method within each if statment in the DecisionBasedOnWeather and DecisionBasedOnPrice methods, the GenerateRandomNumber method can be called. It can also be utilized anywhere. 
+        //////SOLID//////I created the GenerateRandomNumber method keeping the Single Responsibility Principle in mind. Instead of nesting a new generate random number method within each if statment in the DecisionBasedOnWeather and DecisionBasedOnPrice methods, the GenerateRandomNumber method can be called. It can also be utilized anywhere. 
         private int GenerateRandomNumber(int min, int max)
         {
             int randomGeneratedNumber = random.Next(min, max);

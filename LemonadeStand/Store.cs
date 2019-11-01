@@ -66,6 +66,7 @@ namespace LemonadeStand
             double CostOfCups = pricePerCup * cups;
             player.wallet.money -= CostOfCups;
             player.inventory.cupsInInv += cups;
+            player.wallet.investedMoney += CostOfCups;
         }
 
         public void SellLemons()
@@ -75,6 +76,7 @@ namespace LemonadeStand
             double CostOfLemons = pricePerLemon * lemons;
             player.wallet.money -= CostOfLemons;
             player.inventory.lemonsInInv += lemons;
+            player.wallet.investedMoney += CostOfLemons;
         }
 
         public void SellSugar()
@@ -84,6 +86,7 @@ namespace LemonadeStand
             double CostOfSugar = pricePerSugarCube * sugarCubes;
             player.wallet.money -= CostOfSugar;
             player.inventory.sugarCubesInInv += sugarCubes;
+            player.wallet.investedMoney += CostOfSugar;
         }
 
         public void SellIceCubes()
@@ -93,6 +96,8 @@ namespace LemonadeStand
             double CostOfIceCubes = pricePerIceCube * iceCubes;
             player.wallet.money -= CostOfIceCubes;
             player.inventory.iceCubesInInv += iceCubes;
+            player.wallet.investedMoney += CostOfIceCubes;
         }
+
     }
 }

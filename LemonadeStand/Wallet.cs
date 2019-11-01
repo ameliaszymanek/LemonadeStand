@@ -11,11 +11,13 @@ namespace LemonadeStand
         //member variables (HAS A)
         public double money;
         public double Money;
+        public double investedMoney;
 
         //constructor (BUILD)
         public Wallet()
         {
             money = 20.00;
+            investedMoney = 0;
             Money = 0;
         }
 
