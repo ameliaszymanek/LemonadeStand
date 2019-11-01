@@ -47,10 +47,6 @@ namespace LemonadeStand
                 Console.WriteLine("Day" + ": Today's forecast is: " + DaysInOneWeek[i].weather.temperature + " and " + DaysInOneWeek[i].weather.condition);
                 DaysInOneWeek[i].RunDay(player, store);
             }
-            
-
-
-
         }
 
 

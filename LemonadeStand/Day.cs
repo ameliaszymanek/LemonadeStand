@@ -43,7 +43,7 @@ namespace LemonadeStand
             DisplayEndOfDayRecap(player);
             MoveDayEarnings(player);
         }
-
+        ///////////////The PlayerMenu method was created keeping the Open/Closed Principle in mind. I can easily make a case for "week forecast" down the road to add new functionality within the existing method.
         public void PlayerMenu(Player player, Store store)
         {
             Console.WriteLine("What would you like to do to prepare for your day?\nTo view your inventory type 'inventory'\nTo see how much money you have type 'wallet'\nTo purchase items for your lemonade stand type 'store'\nSet your price before you start selling\nTo set the price for a cup of lemonade type 'set price'\nMake a pitcher before you open\nType 'make pitcher' to make a pitcher\nWhen you are ready to open your lemonade stand type 'open'");
