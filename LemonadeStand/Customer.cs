@@ -90,14 +90,20 @@ namespace LemonadeStand
             }
             else
             {
-                return false;
-                
+                NotBuying(player);
+                Console.WriteLine("No thanks!");
+                return false;   
             }
         }
 
         public void PayForCupOfLem(Player player)
         {
             player.wallet.Money += player.recipe.pricePerCup;
+        }
+
+        public void NotBuying(Player player)
+        {
+            player.wallet.Money += 0;
         }
 
         

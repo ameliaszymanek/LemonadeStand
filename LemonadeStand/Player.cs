@@ -42,10 +42,12 @@ namespace LemonadeStand
                 inventory.lemonsInInv -= recipe.amountOfLemons;
                 inventory.sugarCubesInInv -= recipe.amountOfSugarCubes;
                 inventory.iceCubesInInv -= recipe.amountOfIceCubes;
+                pitcher.cupsLeftInPitcher = 15;
             }
-            pitcher.cupsLeftInPitcher = 15;
-
-
+            else
+            {
+                Console.WriteLine("You do not have enough ingredients in your inventory to make a new pitcher.");
+            }
         }
 
         
