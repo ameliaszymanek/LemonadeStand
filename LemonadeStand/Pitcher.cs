@@ -15,7 +15,6 @@ namespace LemonadeStand
         public Pitcher()
         {
             cupsLeftInPitcher = 15;
-
         }
 
         //member methods (CAN DO)
@@ -30,7 +29,6 @@ namespace LemonadeStand
             {
                 player.MakePitcher();
             }
-            
         }
 
 

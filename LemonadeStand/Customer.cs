@@ -17,7 +17,6 @@ namespace LemonadeStand
             this.random = random;
         }
 
-
         //member methods (CAN DO)
 
         private int GenerateRandomNumber(int min, int max)
@@ -25,8 +24,6 @@ namespace LemonadeStand
             int randomGeneratedNumber = random.Next(min, max);
             return randomGeneratedNumber;
         }
-
-
         private int DecisionBasedOnWeather(Weather weather)
         {
             if (weather.temperature > 70 && weather.condition == "sunny")
@@ -87,16 +84,6 @@ namespace LemonadeStand
                 PayForCupOfLem(player);
                 Console.WriteLine("Cup sold!");
             }
-            //else if (DecisionBasedOnWeather(weather) < 50 && DecisionBasedOnPrice(player) > 50)
-            //{
-            //    NotBuying(player);
-            //    Console.WriteLine("No thanks!");
-            //}
-            //else if (DecisionBasedOnWeather(weather) > 50 && DecisionBasedOnPrice(player) < 50)
-            //{
-            //    NotBuying(player);
-            //    Console.WriteLine("No thanks!");
-            //}
             else
             {
                 NotBuying(player);

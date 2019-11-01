@@ -28,7 +28,7 @@ namespace LemonadeStand
         public void CreateDays()
         {
             Console.WriteLine(player.name + ", for how many days would you like to play?");
-            int result = int.Parse(Console.ReadLine());
+            int result = int.Parse(Console.ReadLine().ToLower());
             Random random = new Random();
             for (int i = 0; i < result; i++)
             {
@@ -43,7 +43,7 @@ namespace LemonadeStand
             CreateDays();
             for (int i = 0; i < DaysInOneWeek.Count; i++)
             {
-                Console.WriteLine("Today's forecast is: " + DaysInOneWeek[i].weather.temperature + " and " + DaysInOneWeek[i].weather.condition);
+                Console.WriteLine("Day" + ": Today's forecast is: " + DaysInOneWeek[i].weather.temperature + " and " + DaysInOneWeek[i].weather.condition);
                 DaysInOneWeek[i].RunDay(player, store);
             }
             

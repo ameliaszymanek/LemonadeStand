@@ -21,10 +21,10 @@ namespace LemonadeStand
         public Store(Player player)
         {
             ItemsAtStore = new List<string>() { "cups", "lemons", "sugar", "ice cubes" };
-            pricePerCup = .15;
+            pricePerCup = .05;
             pricePerLemon = .25;
             pricePerSugarCube = .10;
-            pricePerIceCube = .05;
+            pricePerIceCube = .02;
             this.player = player;
             
         }
@@ -34,7 +34,7 @@ namespace LemonadeStand
         //member methods (CAN DO)
         public void SellItems()
         {
-            Console.WriteLine("What would you like to buy? type 'cups', 'lemons', 'sugar', or 'ice cubes'. If you are done shopping type 'done'.");
+            Console.WriteLine("What would you like to buy? type 'cups'($0.05 each), 'lemons'($0.25 each), 'sugar'($0.10 each), or 'ice cubes'($0.02 each). If you are done shopping type 'done'.");
             string ItemsAtStore = Console.ReadLine().ToLower();
             switch(ItemsAtStore)
             {
@@ -62,7 +62,7 @@ namespace LemonadeStand
         public void SellCups()
         {
             Console.WriteLine("How many cups do you need?");
-            int cups = int.Parse(Console.ReadLine());
+            int cups = int.Parse(Console.ReadLine().ToLower());
             double CostOfCups = pricePerCup * cups;
             player.wallet.money -= CostOfCups;
             player.inventory.cupsInInv += cups;
@@ -71,7 +71,7 @@ namespace LemonadeStand
         public void SellLemons()
         {
             Console.WriteLine("How many lemons do you need?");
-            int lemons = int.Parse(Console.ReadLine());
+            int lemons = int.Parse(Console.ReadLine().ToLower());
             double CostOfLemons = pricePerLemon * lemons;
             player.wallet.money -= CostOfLemons;
             player.inventory.lemonsInInv += lemons;
@@ -80,7 +80,7 @@ namespace LemonadeStand
         public void SellSugar()
         {
             Console.WriteLine("How many sugar cubes do you need?");
-            int sugarCubes = int.Parse(Console.ReadLine());
+            int sugarCubes = int.Parse(Console.ReadLine().ToLower());
             double CostOfSugar = pricePerSugarCube * sugarCubes;
             player.wallet.money -= CostOfSugar;
             player.inventory.sugarCubesInInv += sugarCubes;
@@ -89,16 +89,10 @@ namespace LemonadeStand
         public void SellIceCubes()
         {
             Console.WriteLine("How many ice cubes do you need?");
-            int iceCubes = int.Parse(Console.ReadLine());
+            int iceCubes = int.Parse(Console.ReadLine().ToLower());
             double CostOfIceCubes = pricePerIceCube * iceCubes;
             player.wallet.money -= CostOfIceCubes;
             player.inventory.iceCubesInInv += iceCubes;
         }
-
-
-
-
-
-
     }
 }

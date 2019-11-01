@@ -13,7 +13,6 @@ namespace LemonadeStand
         public int temperature;
         public List<string> weatherConditions;
         Random randomWeatherCondition;
-        //private Random randomWeatherCondition;
 
         //constructor (BUILD)
         public Weather(Random rng)
@@ -22,7 +21,6 @@ namespace LemonadeStand
             weatherConditions = new List<string>() { "sunny", "cloudy", "rainy" };
             DayTemperature();
             DayWeatherCondition();
-          
         }
 
         //member methods (CAN DO)
@@ -36,9 +34,5 @@ namespace LemonadeStand
         {   
             temperature = randomWeatherCondition.Next(50, 101);
         }
-
-        
-
-
     }
 }

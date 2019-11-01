@@ -24,15 +24,13 @@ namespace LemonadeStand
             inventory = new Inventory();
             recipe = new Recipe();
             pitcher = new Pitcher();
-            
-
         }
 
         //member methods (CAN DO)
         public void ChooseName()
         {
             Console.WriteLine("What is your name?");
-            name = Console.ReadLine();
+            name = Console.ReadLine().ToLower();
         }
 
         public void MakePitcher()
@@ -47,7 +45,6 @@ namespace LemonadeStand
             else
             {
                 Console.WriteLine("You do not have enough ingredients in your inventory to make a new pitcher.");
-                
             }
         }
 

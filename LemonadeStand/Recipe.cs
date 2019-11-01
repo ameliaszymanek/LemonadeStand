@@ -27,7 +27,7 @@ namespace LemonadeStand
         {
             Console.WriteLine("Time to create your lemonade recipe!");
             Console.WriteLine($"Enter {amount}");
-            string input = Console.ReadLine();
+            string input = Console.ReadLine().ToLower();
             return input;
         }
         public void CreateRecipe()
@@ -35,13 +35,12 @@ namespace LemonadeStand
             amountOfLemons = int.Parse(GetStringInput("amount of lemons"));
             amountOfSugarCubes = int.Parse(GetStringInput("amount of sugar cubes"));
             amountOfIceCubes = int.Parse(GetStringInput("amount of ice cubes"));
-
         }
 
         public void SetPrice()
         {
             Console.WriteLine("What would you like the price per cup of lemonade to be?");
-            pricePerCup = Double.Parse(Console.ReadLine());
+            pricePerCup = Double.Parse(Console.ReadLine().ToLower());
         }
 
        

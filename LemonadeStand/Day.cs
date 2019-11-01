@@ -18,25 +18,13 @@ namespace LemonadeStand
             weather = new Weather(random);
             customers = new List<Customer>();
             NumOfCustomersForDay(random);
-
         }
 
         //member methods (CAN DO)
         public void ActualWeatherOnDay()
         {
-            Console.WriteLine("Today's temperature is " + weather.temperature + "degrees Ferenheit with" + weather.condition + "skies");
-            
+            Console.WriteLine("Today's temperature is " + weather.temperature + "degrees Ferenheit with" + weather.condition + "skies");  
         }
-
-        //public void PredictedForecastForDay()
-        //{
-        //    //
-        //}
-
-        //public void PredictedForecastForWeek()
-        //{
-        //    //
-        //}
 
         public void RunDay(Player player, Store store)
         {
@@ -54,7 +42,6 @@ namespace LemonadeStand
             }
             DisplayEndOfDayRecap(player);
             MoveDayEarnings(player);
-            //next day...
         }
 
         public void PlayerMenu(Player player, Store store)
@@ -86,7 +73,6 @@ namespace LemonadeStand
                 case "open":
                     break;
             }
-
         }
 
         private void NumOfCustomersForDay(Random random)
