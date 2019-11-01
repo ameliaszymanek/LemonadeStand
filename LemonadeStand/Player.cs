@@ -47,6 +47,7 @@ namespace LemonadeStand
             else
             {
                 Console.WriteLine("You do not have enough ingredients in your inventory to make a new pitcher.");
+                
             }
         }
 

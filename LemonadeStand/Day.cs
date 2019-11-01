@@ -28,22 +28,29 @@ namespace LemonadeStand
             
         }
 
-        public void PredictedForecastForDay()
-        {
-            //
-        }
+        //public void PredictedForecastForDay()
+        //{
+        //    //
+        //}
 
-        public void PredictedForecastForWeek()
-        {
-            //
-        }
+        //public void PredictedForecastForWeek()
+        //{
+        //    //
+        //}
 
         public void RunDay(Player player, Store store)
         {
             PlayerMenu(player, store);
             foreach (Customer customer in customers)
             {
-                customer.MakeDecision(weather, player);
+                if (player.pitcher.cupsLeftInPitcher > 0)
+                {
+                    customer.MakeDecision(weather, player);
+                }
+                else if (player.pitcher.cupsLeftInPitcher == 0)
+                {
+                    player.MakePitcher();
+                } 
             }
             DisplayEndOfDayRecap(player);
             MoveDayEarnings(player);

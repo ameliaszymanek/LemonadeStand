@@ -79,20 +79,28 @@ namespace LemonadeStand
             }
         }
 
-        public bool MakeDecision(Weather weather, Player player)
+        public void MakeDecision(Weather weather, Player player)
         {
             if (DecisionBasedOnWeather(weather) > 50 && DecisionBasedOnPrice(player) > 50)
             {
                 player.pitcher.PourCup(player);
                 PayForCupOfLem(player);
                 Console.WriteLine("Cup sold!");
-                return true;
             }
+            //else if (DecisionBasedOnWeather(weather) < 50 && DecisionBasedOnPrice(player) > 50)
+            //{
+            //    NotBuying(player);
+            //    Console.WriteLine("No thanks!");
+            //}
+            //else if (DecisionBasedOnWeather(weather) > 50 && DecisionBasedOnPrice(player) < 50)
+            //{
+            //    NotBuying(player);
+            //    Console.WriteLine("No thanks!");
+            //}
             else
             {
                 NotBuying(player);
                 Console.WriteLine("No thanks!");
-                return false;   
             }
         }
 
