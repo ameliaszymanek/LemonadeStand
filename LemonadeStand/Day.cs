@@ -89,7 +89,8 @@ namespace LemonadeStand
         {
             Console.WriteLine("You started with $" + player.wallet.money + " today");
             Console.WriteLine("Today's earnings = $" + player.wallet.Money);
-            Console.WriteLine("Total running profit/loss = $" + (player.wallet.Money - player.wallet.investedMoney));
+            Console.WriteLine("Today's profit/loss = $" + (player.wallet.Money - player.wallet.investedMoney));
+            Console.WriteLine("Overall profit/loss = $" + player.wallet.profit);
             Console.WriteLine("Total money in pocket = $" + (player.wallet.Money + player.wallet.money));
         }
 
@@ -97,6 +98,7 @@ namespace LemonadeStand
         {
             player.wallet.money += player.wallet.Money;
             player.wallet.Money -= player.wallet.Money;
+            player.wallet.profit += (player.wallet.Money - player.wallet.investedMoney);
         }
 
         private void ResetInvestedMoney(Player player)

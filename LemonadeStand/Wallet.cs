@@ -12,6 +12,7 @@ namespace LemonadeStand
         public double money;
         public double Money;
         public double investedMoney;
+        public double profit;
 
         //constructor (BUILD)
         public Wallet()
@@ -19,6 +20,7 @@ namespace LemonadeStand
             money = 20.00;
             investedMoney = 0;
             Money = 0;
+            profit = 0;
         }
 
         //member methods (CAN DO)
