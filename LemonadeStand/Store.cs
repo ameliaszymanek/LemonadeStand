@@ -72,31 +72,54 @@ namespace LemonadeStand
         public void SellLemons()
         {
             Console.WriteLine("How many lemons do you need?");
-            int lemons = int.Parse(Console.ReadLine().ToLower());
-            double CostOfLemons = pricePerLemon * lemons;
-            player.wallet.money -= CostOfLemons;
-            player.inventory.lemonsInInv += lemons;
-            player.wallet.investedMoney += CostOfLemons;
+            try
+            {
+                int lemons = int.Parse(Console.ReadLine());
+                double CostOfLemons = pricePerLemon * lemons;
+                player.wallet.money -= CostOfLemons;
+                player.inventory.lemonsInInv += lemons;
+                player.wallet.investedMoney += CostOfLemons;
+            }
+            catch(FormatException)
+            {
+                Console.WriteLine("Not a number! Please enter a number.");
+            }
         }
 
         public void SellSugar()
         {
             Console.WriteLine("How many sugar cubes do you need?");
-            int sugarCubes = int.Parse(Console.ReadLine().ToLower());
-            double CostOfSugar = pricePerSugarCube * sugarCubes;
-            player.wallet.money -= CostOfSugar;
-            player.inventory.sugarCubesInInv += sugarCubes;
-            player.wallet.investedMoney += CostOfSugar;
+            try
+            {
+                int sugarCubes = int.Parse(Console.ReadLine());
+                double CostOfSugar = pricePerSugarCube * sugarCubes;
+                player.wallet.money -= CostOfSugar;
+                player.inventory.sugarCubesInInv += sugarCubes;
+                player.wallet.investedMoney += CostOfSugar;
+            }
+            catch(FormatException)
+            {
+                Console.WriteLine("Not a number! Please enter a number.");
+            }
+            
         }
 
         public void SellIceCubes()
         {
             Console.WriteLine("How many ice cubes do you need?");
-            int iceCubes = int.Parse(Console.ReadLine().ToLower());
-            double CostOfIceCubes = pricePerIceCube * iceCubes;
-            player.wallet.money -= CostOfIceCubes;
-            player.inventory.iceCubesInInv += iceCubes;
-            player.wallet.investedMoney += CostOfIceCubes;
+            try
+            {
+                int iceCubes = int.Parse(Console.ReadLine());
+                double CostOfIceCubes = pricePerIceCube * iceCubes;
+                player.wallet.money -= CostOfIceCubes;
+                player.inventory.iceCubesInInv += iceCubes;
+                player.wallet.investedMoney += CostOfIceCubes;
+            }
+            catch(FormatException)
+            {
+                Console.WriteLine("Not a number! Please enter a number.");
+            }
+            
         }
 
     }

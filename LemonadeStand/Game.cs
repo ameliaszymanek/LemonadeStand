@@ -28,13 +28,21 @@ namespace LemonadeStand
         public void CreateDays()
         {
             Console.WriteLine(player.name + ", for how many days would you like to play?");
-            int result = int.Parse(Console.ReadLine().ToLower());
-            Random random = new Random();
-            for (int i = 0; i < result; i++)
+            try
             {
-                Day day = new Day(random);
-                DaysInOneWeek.Add(day);
+                int result = int.Parse(Console.ReadLine().ToLower());
+                Random random = new Random();
+                for (int i = 0; i < result; i++)
+                {
+                    Day day = new Day(random);
+                    DaysInOneWeek.Add(day);
+                }
             }
+            catch(FormatException)
+            {
+                Console.WriteLine("Not a number! Please enter a number.");
+            }
+            
         }
         public void RunGame()
         {
